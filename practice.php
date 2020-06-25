@@ -1,47 +1,45 @@
 <?php 
-// echo 'hello php!';
 
-// $a　という変数に3を、$b　という変数に７を代入して、echoを使って$a+$bの結果を表示してみましょう。
-$a = 3;
-$b = 7;
-echo "・課題1:";
-echo $a + $b;
+echo "課題1:";
 
-// $array_month という配列に1月〜12月の文字列を代入し、echoで8月を表示してみましょう。
-$array_month = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
-echo "・課題2:";
-echo $array_month[7];
+$name = "池田多香緒";
+if ($name = "池田多香緒")  {
+  echo "私の名前は${name}です";
+}else {
+    echo "あなたの名前ではありません";
+  }
+echo "\n";
+echo "課題2:";
 
-// $hello　という変数に　”Hello, “を $name という変数にあなたの名前を、　
-// $world という変数に　”‘s World!” を代入して、各変数を連結させて “Hello, あなたの名前’s World!” と表示してみましょう。
-$hello = "Hello,";
-$name = "takao";
-$world = "'s World!";
-echo "・課題3:";
+$total = 0;
+for($i=0; $i <=10000; $i++) {
+  
+  $total += $i;
+}
+echo $total;
+echo "\n";
 
-echo $hello . $name . $world;
+echo "課題3:";
+echo "\n";
 
-// $tech_boostに “tech “という文字列が代入されています。複合演算を使って、echo $tech_boostと実行すると「tech boost」と表示されるように実装してみましょう。
-$tech_boost = "tech";
-$tech_boost .= "_boost";
-echo "・課題4:";
-echo $tech_boost;
+$fruits = array("apple", "orange", "banana", "lemon", "grape");
+foreach($fruits as $fruit){
+  echo $fruit;
+  echo "\n";
+}
 
-// 【応用】次のプログラムにはバグがあります。どこにバグが有るか調べて修正してみましょう。(バグは一つとは限りません。)
-$_2018_calendar = [
-  "January" => "1月",
-  "February" => "2月",
-  "March" => "3月",
-  "April" => "4月",
-  "May" => "5月",
-  "June" => "6月",
-  "July" => "7月",
-  "August" => "8月",
-  "September" => "9月",
-  "October" => "10月",
-  "November" => "11月",
-  "December" => "12月"
-];
+echo "課題4:";
+echo "\n";
+/* for文の始めの値を定義する */
+$start = 1;
+/* for文の終わりの値を定義する */
+$end = 100;
 
-echo "・課題5:";
-echo $_2018_calendar["December"];
+for($i = $start; $i <= $end; $i++){
+
+  // 5で割り切れたら{}内を実行する
+  if($i % 5 === 0){
+    echo $i;
+    echo "\n";
+  }
+}
